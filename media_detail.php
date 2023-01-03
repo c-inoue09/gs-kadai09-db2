@@ -60,7 +60,7 @@ if ($status === false) {
             <div class="container-fluid">
                 <div class="navbar-header"><a class="navbar-brand" href="select.php">メディア一覧</a></div>
                 <div class="navbar-header"><a class="navbar-brand" href="journalist_select.php">記者一覧</a></div>
-                <div class="navbar-header"><a class="navbar-brand" href="journalist_register.php">記者登録</a></div>
+                <div class="navbar-header"><a class="navbar-brand" href="index.php">記者登録</a></div>
             </div>
         </nav>
     </header>
@@ -74,16 +74,16 @@ if ($status === false) {
                 <p>ID： No.<?= $result['media_id']?></p>
                 <label>メディア種別：<select name="media_category" value ="<?= $result['media_category']?>">
                 <option value="未選択">--選択してください--</option>
-                    <option value="新聞(全国紙)">新聞(全国紙)</option>
-                    <option value="新聞(ブロック紙)">新聞(ブロック紙)</option>
-                    <option value="新聞(地方紙)">新聞(地方紙)</option>
-                    <option value="新聞(経済紙・産業情報紙)">新聞(経済紙・産業情報紙)</option>
-                    <option value="新聞(その他)">新聞(その他)</option>
-                    <option value="雑誌">雑誌</option>
-                    <option value="Webメディア">Webメディア</option>
-                    <option value="TV">TV</option>
-                    <option value="ラジオ">ラジオ</option>
-                    <option value="その他">その他</option>
+                    <option value="新聞(全国紙)" <?= $result['media_category'] == '新聞(全国紙)' ? 'selected' : "" ?>>新聞(全国紙)</option>
+                    <option value="新聞(ブロック紙)" <?= $result['media_category'] == '新聞(ブロック紙)' ? 'selected' : "" ?>>新聞(ブロック紙)</option>
+                    <option value="新聞(地方紙)" <?= $result['media_category'] == '新聞(地方紙)' ? 'selected' : "" ?>>新聞(地方紙)</option>
+                    <option value="新聞(経済紙・産業情報紙)" <?= $result['media_category'] == '新聞(経済紙・産業情報紙)' ? 'selected' : "" ?>>新聞(経済紙・産業情報紙)</option>
+                    <option value="新聞(その他)" <?= $result['media_category'] == '新聞(その他)' ? 'selected' : "" ?>>新聞(その他)</option>
+                    <option value="雑誌" <?= $result['media_category'] == '雑誌' ? 'selected' : "" ?>>雑誌</option>
+                    <option value="Webメディア" <?= $result['media_category'] == 'Webメディア' ? 'selected' : "" ?>>Webメディア</option>
+                    <option value="TV" <?= $result['media_category'] == 'TV' ? 'selected' : "" ?>>TV</option>
+                    <option value="ラジオ" <?= $result['media_category'] == 'ラジオ' ? 'selected' : "" ?>>ラジオ</option>
+                    <option value="その他" <?= $result['media_category'] == 'その他' ? 'selected' : "" ?>>その他</option>
                 </select></label><br>
 
                 <label>媒体名：<input type="text" name="media_name" value ="<?= $result['media_name']?>"></label><br>
