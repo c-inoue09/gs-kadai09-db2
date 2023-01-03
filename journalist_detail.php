@@ -114,7 +114,7 @@ if ($status === false) {
                     <option value="高">高</option>
                     </select>
                 </label><br>
-                <label>取材・露出：<select name="status">                    
+                <label>取材・露出：<select name="status" value="<?= $result['status'] ?>">                    
                     <option value="未選択">--選択してください--</option>
                     <option value="未接触">未接触</option>
                     <option value="面会済">面会済</option>
