@@ -109,16 +109,16 @@ if ($status === false) {
                 <label>肩書：<input type="text" name="title" value="<?= $result['title'] ?>"></label><br>
                 <label>優先度：<select name="priority" value="<?= $result['priority'] ?>">
                     <option value="未選択">--選択してください--</option>
-                    <option value="低">低</option>
-                    <option value="中">中</option>
-                    <option value="高">高</option>
+                    <option value="低" <?= $result['priority'] == '低' ? 'selected' : "" ?> >低</option>
+                    <option value="中" <?= $result['priority'] == '中' ? 'selected' : "" ?> >中</option>
+                    <option value="高" <?= $result['priority'] == '高' ? 'selected' : "" ?> >高</option>
                     </select>
                 </label><br>
-                <label>取材・露出：<select name="status" value="<?= $result['status'] ?>">                    
+                <label>取材・露出：<select name="status">                    
                     <option value="未選択">--選択してください--</option>
-                    <option value="未接触">未接触</option>
-                    <option value="面会済">面会済</option>
-                    <option value="記事化">記事化</option>
+                    <option value="未接触" <?= $result['status'] == '未接触' ? 'selected' : "" ?> >未接触</option>
+                    <option value="面会済" <?= $result['status'] == '面会済' ? 'selected' : "" ?> >面会済</option>
+                    <option value="記事化" <?= $result['status'] == '記事化' ? 'selected' : "" ?> >記事化</option>
                 </select>
                 </label><br>
                 <label>Email：<input type="text" name="email" value="<?= $result['email'] ?>"></label><br>
